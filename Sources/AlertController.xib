@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="AlertController" customModule="AlertController">
+            <connections>
+                <outlet property="buttonsView" destination="Xp3-hT-9Qv" id="24x-tx-iwe"/>
+                <outlet property="imageView" destination="Oou-mx-e81" id="3vB-MN-lto"/>
+                <outlet property="logoImageView" destination="jqh-tF-ild" id="hk0-7r-zSB"/>
+                <outlet property="messageView" destination="kSf-wy-M3J" id="jKh-O9-zCw"/>
+                <outlet property="textFieldsHeight" destination="scz-qY-qrs" id="FfU-K6-5Cp"/>
+                <outlet property="textFieldsView" destination="t89-f4-Yzq" id="d7y-M7-4cJ"/>
+                <outlet property="titleView" destination="8eW-hP-756" id="MoP-Ae-SnC"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+                <outlet property="visualEffectView" destination="nvA-Eb-vsX" id="btw-KL-a8K"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="nvA-Eb-vsX">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="140"/>
+                    <subviews>
+                        <customView translatesAutoresizingMaskIntoConstraints="NO" id="t89-f4-Yzq">
+                            <rect key="frame" x="0.0" y="40" width="400" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="height" id="scz-qY-qrs"/>
+                            </constraints>
+                        </customView>
+                        <customView identifier="infoView" translatesAutoresizingMaskIntoConstraints="NO" id="uBc-3q-xup">
+                            <rect key="frame" x="0.0" y="40" width="400" height="100"/>
+                            <subviews>
+                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="kSf-wy-M3J">
+                                    <rect key="frame" x="90" y="38" width="92" height="17"/>
+                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Multiline Label" id="cum-NZ-BSG">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oou-mx-e81">
+                                    <rect key="frame" x="20" y="16" width="64" height="64"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="64" id="kBH-zC-jQr"/>
+                                        <constraint firstAttribute="height" constant="64" id="zE2-pr-MsI"/>
+                                    </constraints>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="AlertCautionIcon" id="5ul-rd-ry3"/>
+                                </imageView>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8eW-hP-756">
+                                    <rect key="frame" x="90" y="63" width="33" height="17"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title" id="mqN-bh-Xx6">
+                                        <font key="font" metaFont="systemBold"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jqh-tF-ild">
+                                    <rect key="frame" x="52" y="16" width="32" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="D4S-V6-Lah"/>
+                                        <constraint firstAttribute="height" constant="32" id="Lzj-8f-C00"/>
+                                    </constraints>
+                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="LB9-IM-5tf"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="8eW-hP-756" firstAttribute="top" secondItem="uBc-3q-xup" secondAttribute="top" constant="20" id="Btg-Lm-zqm"/>
+                                <constraint firstItem="Oou-mx-e81" firstAttribute="leading" secondItem="uBc-3q-xup" secondAttribute="leading" constant="20" id="Peu-v2-TT5"/>
+                                <constraint firstItem="jqh-tF-ild" firstAttribute="bottom" secondItem="Oou-mx-e81" secondAttribute="bottom" id="Ww5-8X-FcH"/>
+                                <constraint firstItem="kSf-wy-M3J" firstAttribute="leading" secondItem="Oou-mx-e81" secondAttribute="trailing" constant="8" id="cxh-6X-pB9"/>
+                                <constraint firstItem="8eW-hP-756" firstAttribute="leading" secondItem="Oou-mx-e81" secondAttribute="trailing" constant="8" id="eDT-zV-Ate"/>
+                                <constraint firstItem="kSf-wy-M3J" firstAttribute="top" secondItem="8eW-hP-756" secondAttribute="bottom" constant="8" id="fWO-TF-LAh"/>
+                                <constraint firstItem="jqh-tF-ild" firstAttribute="trailing" secondItem="Oou-mx-e81" secondAttribute="trailing" id="hVc-PL-Flc"/>
+                                <constraint firstItem="Oou-mx-e81" firstAttribute="top" secondItem="uBc-3q-xup" secondAttribute="top" constant="20" id="kKg-G8-2U0"/>
+                            </constraints>
+                        </customView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="t89-f4-Yzq" firstAttribute="top" secondItem="uBc-3q-xup" secondAttribute="bottom" id="9eh-aP-r61"/>
+                        <constraint firstAttribute="trailing" secondItem="t89-f4-Yzq" secondAttribute="trailing" id="LvO-HA-E59"/>
+                        <constraint firstItem="uBc-3q-xup" firstAttribute="leading" secondItem="nvA-Eb-vsX" secondAttribute="leading" id="ZPw-cb-CMJ"/>
+                        <constraint firstItem="t89-f4-Yzq" firstAttribute="leading" secondItem="nvA-Eb-vsX" secondAttribute="leading" id="i0a-bg-nIU"/>
+                        <constraint firstItem="uBc-3q-xup" firstAttribute="top" secondItem="nvA-Eb-vsX" secondAttribute="top" id="mS2-2O-9I0"/>
+                        <constraint firstAttribute="trailing" secondItem="uBc-3q-xup" secondAttribute="trailing" id="qVY-lg-E3o"/>
+                    </constraints>
+                </visualEffectView>
+                <customView identifier="buttonsView" autoresizesSubviews="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xp3-hT-9Qv">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Jt9-aZ-Oky"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Xp3-hT-9Qv" firstAttribute="top" secondItem="t89-f4-Yzq" secondAttribute="bottom" id="2mX-a2-JL4"/>
+                <constraint firstAttribute="bottom" secondItem="Xp3-hT-9Qv" secondAttribute="bottom" id="CrY-C6-TxV"/>
+                <constraint firstAttribute="bottom" secondItem="nvA-Eb-vsX" secondAttribute="bottom" id="E18-fi-uHG"/>
+                <constraint firstAttribute="trailing" secondItem="nvA-Eb-vsX" secondAttribute="trailing" id="KOz-eZ-5qq"/>
+                <constraint firstAttribute="trailing" secondItem="Xp3-hT-9Qv" secondAttribute="trailing" id="dKT-9V-Lhf"/>
+                <constraint firstItem="Xp3-hT-9Qv" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="fg1-Lm-t4W"/>
+                <constraint firstItem="nvA-Eb-vsX" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="gA7-RK-4HF"/>
+                <constraint firstItem="nvA-Eb-vsX" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="i8H-z5-Zi3"/>
+            </constraints>
+            <point key="canvasLocation" x="94" y="-215"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="AlertCautionIcon" width="512" height="512"/>
+    </resources>
+</document>
