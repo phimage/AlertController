@@ -65,7 +65,7 @@ to learn more.
     ```ruby
     use_frameworks!
 
-    pod 'AlertController'
+    pod 'NSAlertController'
     ```
 
 2. Run `pod install` and open the `.xcworkspace` file to launch Xcode.
