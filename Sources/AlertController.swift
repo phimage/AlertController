@@ -46,7 +46,7 @@ open class AlertController: NSViewController {
     public init(title: String?, message: String?, preferredStyle: AlertController.Style) {
         self.message = message
         self.preferredStyle = preferredStyle
-        super.init(nibName: "AlertController", bundle: Bundle(for: AlertController.self))!
+		super.init(nibName: "AlertController", bundle: Bundle(for: AlertController.self))
         self.title = title
     }
 
@@ -91,7 +91,7 @@ open class AlertController: NSViewController {
             buttonsView.addSubview(button)
             
             // Center buton vertically
-            let verticalConstraint = NSLayoutConstraint(item: button, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: buttonsView, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0)
+			let verticalConstraint = NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: buttonsView, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
             NSLayoutConstraint.activate([verticalConstraint])
             
             let buttonFormat = "b\(index)"

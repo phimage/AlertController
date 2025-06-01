@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import AppKit
 
 // An AlertAction object represents an action that can be taken when tapping a button in an alert. You use this class to configure information about a single action, including the title to display in the button, any styling information, and a handler to execute when the user taps the button. After creating an alert action object, add it to a AlertController object before displaying the corresponding alert to the user.
 @objc open class AlertAction: NSObject {
@@ -31,7 +31,7 @@ import Foundation
     }
     
     // Action code
-    open let handler: (_ action: AlertAction) -> Void
+	public let handler: (_ action: AlertAction) -> Void
 
     // A Boolean value indicating whether the action is currently enabled.
     open var isEnabled: Bool {
@@ -49,7 +49,7 @@ import Foundation
         // updateButton
         button.action = #selector(AlertAction.perform as (AlertAction) -> () -> ())
         button.target = self
-        button.identifier = title
+        button.identifier = NSUserInterfaceItemIdentifier(title)
         self.title = title
         self.style = style
     }
@@ -62,7 +62,7 @@ import Foundation
 
 extension AlertAction {
     // Styles to apply to action buttons in an alert.
-    public typealias Style = NSBezelStyle
+	public typealias Style = NSButton.BezelStyle
 
     // TODO allow align button right or left
     enum Align {
@@ -73,14 +73,14 @@ extension AlertAction {
 }
 
 extension AlertAction.Style {
-    public static let `default` = NSBezelStyle.rounded
+	public static let `default` = NSButton.BezelStyle.rounded
 }
 
 
 // MARK: factory
 extension AlertAction {
     
-    open static func dismiss(for vC: NSViewController, title: String = "OK") -> AlertAction {
+	public static func dismiss(for vC: NSViewController, title: String = "OK") -> AlertAction {
         return AlertAction(title: title, style: .default) { (action) in
             vC.dismiss(action.button)
         }

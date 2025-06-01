@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AppKit
 
 extension AlertController {
     public enum Style  {

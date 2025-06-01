@@ -1,4 +1,6 @@
-// Package.swift
+// swift-tools-version:5.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
 /*
  The MIT License (MIT)
  Copyright (c) 2016 Eric Marchand (phimage)
@@ -22,5 +24,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "AlertController"
+    name: "AlertController",
+    products: [
+        .library(name: "AlertController",  targets: ["AlertController"]),
+    ],
+    targets: [
+        .target( name: "AlertController", path: "Sources")
+    ]
 )
