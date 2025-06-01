@@ -10,6 +10,7 @@ import Foundation
 import AppKit
 
 // An AlertAction object represents an action that can be taken when tapping a button in an alert. You use this class to configure information about a single action, including the title to display in the button, any styling information, and a handler to execute when the user taps the button. After creating an alert action object, add it to a AlertController object before displaying the corresponding alert to the user.
+@MainActor
 @objc open class AlertAction: NSObject {
 
     // The title of the action’s button.
